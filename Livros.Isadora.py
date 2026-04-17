@@ -1,7 +1,7 @@
 from flask import Flask, jsonify
 import os
 
-app = Flask(-__name__)
+app = Flask(__name__)
 
 livros = [
     {"id": 1, "livros": "Haikyuu","autor": "Haruichi Furudado"},
@@ -21,4 +21,4 @@ def listar_livros():
 
 if __name__ == "_main_":
     port = int(os.environ.get("PORT" , 5000))
-    app.run(host="0.0.0", port=port)
+    app.run(host="0.0.0.0", port=port)
